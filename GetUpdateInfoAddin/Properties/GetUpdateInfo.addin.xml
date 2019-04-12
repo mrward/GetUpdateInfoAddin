@@ -1,0 +1,22 @@
+﻿<ExtensionModel>
+	<Runtime>
+		<Import assembly="GetUpdateInfoAddin.dll" />
+	</Runtime>
+
+	<Extension path="/MonoDevelop/Ide/Commands">
+		<Category _name="GetUpdateInfoAddin" id="GetUpdateInfoAddin">
+			<Command
+				id="MonoDevelop.GetUpdateInfoAddin.Commands.GetUpdateInfo"
+				_description="Get update info"
+				_label="Get Update Info"
+				defaultHandler="GetUpdateInfoAddin.GetUpdateInfoHandler" />
+		</Category>
+	</Extension>
+
+	<Extension path="/MonoDevelop/Ide/MainMenu/File">
+		<CommandItem
+			id="MonoDevelop.GetUpdateInfoAddin.Commands.GetUpdateInfo"
+			insertbefore="OpenSep"
+			insertafter="MonoDevelop.Ide.Commands.FileCommands.OpenFile" />
+	</Extension>
+</ExtensionModel>
